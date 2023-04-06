@@ -41,7 +41,7 @@ if is_torch_tpu_available():
 
 logger = logging.getLogger(__name__)
 
-
+max_split_size_mb
 class Trainer(Trainer):
     """Trainer for event extraction.
 
