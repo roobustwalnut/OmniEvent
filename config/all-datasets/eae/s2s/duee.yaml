@@ -47,9 +47,9 @@ generation_num_beams: 4
 predict_with_generate: True 
 ignore_pad_token_for_loss: True 
 
-per_device_train_batch_size: 4
-per_device_eval_batch_size: 32
-gradient_accumulation_steps: 8
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 2
+gradient_accumulation_steps: 2
 # eval_accumulation_steps: 4
 learning_rate: 1.0e-4
 weight_decay: 1.0e-5
@@ -71,5 +71,5 @@ save_steps: 500
 
 # split inference #
 split_infer: True
-split_infer_size: 5000
+split_infer_size: 500
 
