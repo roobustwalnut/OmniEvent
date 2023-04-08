@@ -376,6 +376,12 @@ class TrainingArguments(TrainingArguments):
             "help": "Model parallelism."
         }
     )
+    data_for_evaluation: str=field(
+        default="pred_types",
+        metadata={
+            "help": "Task type. Selected in ['pred_types', 'true_types']"
+        }
+    )
 
 
 class ArgumentParser(HfArgumentParser):
