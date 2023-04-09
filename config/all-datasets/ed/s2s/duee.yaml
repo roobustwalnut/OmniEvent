@@ -43,7 +43,7 @@ per_device_train_batch_size: 1
 per_device_eval_batch_size: 1
 gradient_accumulation_steps: 2
 # eval_accumulation_steps: 4
-learning_rate: 1.0e-2
+learning_rate: 1.0e-4
 weight_decay: 1.0e-5
 warmup_ratio: 0.1 
 max_grad_norm: 1
