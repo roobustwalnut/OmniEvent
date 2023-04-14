@@ -19,9 +19,9 @@ test_file: ../../data/processed/DuEE1.0/test.unified.jsonl
 
 # event detection predictions
 golden_trigger: True 
-train_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/train_preds.json
-validation_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/valid_preds.json
-test_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/test_preds.json
+train_pred_file: None
+validation_pred_file: None
+test_pred_file: None
 
 # config for data processor # 
 truncate_in_batch: True 
@@ -36,7 +36,7 @@ hidden_size: 768
 aggregation: none
 
 # training config #
-num_train_epochs: 2
+num_train_epochs: 1
 max_seq_length: 200
 max_out_length: 128
 dataloader_num_workers: 1
