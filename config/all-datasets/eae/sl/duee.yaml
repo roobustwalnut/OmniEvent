@@ -18,7 +18,7 @@ validation_file: ../../data/processed/DuEE1.0/valid.unified.jsonl
 test_file: ../../data/processed/DuEE1.0/test.unified.jsonl
 
 # event detection predictions
-golden_trigger: False
+golden_trigger: True
 train_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/train_preds.json
 validation_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/valid_preds.json
 test_pred_file: output/DuEE1.0/ED/token_classification/bert-base-chinese-marker/test_preds.json
@@ -39,15 +39,15 @@ aggregation: none
 num_train_epochs: 20
 max_seq_length: 200
 max_out_length: 200
-dataloader_num_workers: 2
+dataloader_num_workers: 1
 
 generation_max_length: 250
 generation_num_beams: 250
 predict_with_generate: True
 ignore_pad_token_for_loss: True
 
-per_device_train_batch_size: 16
-per_device_eval_batch_size: 64
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
 gradient_accumulation_steps: 1
 # eval_accumulation_steps: 4
 learning_rate: 5.0e-5
@@ -66,6 +66,7 @@ evaluation_strategy: epoch
 eval_steps: 500
 save_strategy: epoch
 save_steps: 500
+save_total_limit: 1
 
 # evaluate/test config #
 eae_eval_mode: loose
